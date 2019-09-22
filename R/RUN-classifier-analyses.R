@@ -5,7 +5,6 @@
 ################################################################
 
 # working directory (created with git clone)
-mainDir <- "~/Documents/GitHub/pptc-pdx-classifier-analysis/"
 mainDir <- "~/pptc-pdx-classifier-analysis/"
 dataDir <- paste0(mainDir,"data/")
 # set path to your git cloned repo

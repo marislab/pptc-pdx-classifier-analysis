@@ -35,7 +35,7 @@ roc_df$model_groups <- paste(roc_df$gene, roc_df$shuffled)
 roc_df$model_groups <- factor(roc_df$model_groups, levels = names(curve_labels))
 
 pdf(paste0(results.folder, Sys.Date(), "-roc.pdf", sep = ""), width = 7, height = 5)
-ggplot(roc_df,
+print(ggplot(roc_df,
        aes(x = fpr,
            y = tpr,
            color = model_groups)) +
@@ -59,7 +59,7 @@ ggplot(roc_df,
                                    "False" = "Real")) +
   xlab("False Positive Rate") +
   ylab("True Positive Rate") +
-  theme_Publication()
+  theme_Publication())
 dev.off()
 
 
@@ -95,7 +95,7 @@ var.score$Hugo_Symbol <- factor(var.score$Hugo_Symbol, levels = c("wild-type", "
 
 ###plot for figure 4D
 pdf(paste(results.folder, Sys.Date(), "-tp53-scoresbyvarianttype.pdf", sep = ""), width = 20, height = 3)
-ggplot(var.score, aes(x = Variant_Classification, y = tp53_score, color = Variant_Classification, alpha = 0.5)) + 
+print(ggplot(var.score, aes(x = Variant_Classification, y = tp53_score, color = Variant_Classification, alpha = 0.5)) + 
   geom_boxplot(outlier.shape = 21, fill = 'white') +
   geom_point(pch = 21, position = position_jitterdodge())+
   geom_hline(aes(yintercept = 0.5), colour = 'black', linetype = "longdash")+
@@ -106,7 +106,7 @@ ggplot(var.score, aes(x = Variant_Classification, y = tp53_score, color = Varian
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank()) + 
   ylim(c(0,1))+
-  scale_color_manual(values = colores)
+  scale_color_manual(values = colores))
 dev.off()
 
 ###subset only osteosarcoma scores for supplemental figures
