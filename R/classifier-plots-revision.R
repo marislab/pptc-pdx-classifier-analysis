@@ -192,7 +192,7 @@ dev.off()
 pdf(paste(results.folder, Sys.Date(), "-tp53scores-bytype.pdf", sep = ""), width = 7, height = 5)
 mycomps <- list(c("wild-type", "SNV"), c("wild-type", "CNV"), c("wild-type", "Fusion"))
 
-ggviolin(var.score, x = "type", y = "tp53_score", fill = "type",alpha = 0.5,
+print(ggviolin(var.score, x = "type", y = "tp53_score", fill = "type",alpha = 0.5,
          palette =colores, add.params = list(fill = "white"),
          shape = 1,
          add = "boxplot", 
@@ -203,7 +203,7 @@ ggviolin(var.score, x = "type", y = "tp53_score", fill = "type",alpha = 0.5,
   theme_Publication() + 
   xlab("Type of Alteration") + 
   ylab('TP53 Classifier Score') +
-  ylim(c(0,1.7))
+  ylim(c(0,1.7)))
 
 
 dev.off()
