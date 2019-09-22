@@ -27,5 +27,5 @@ source(paste0(script.folder, "theme.R"))
 source(paste0(script.folder, "mutation-color-function.R"))
 
 ###run analyses
-source(paste0(mainDir, "classifier-plots-revision.R"))
-source(paste0(mainDir, "corplots.R"))
+source(paste0(script.folder, "classifier-plots-revision.R"))
+source(paste0(script.folder, "corplots.R"))
