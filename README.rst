@@ -52,7 +52,7 @@ Pipeline
          git clone https://github.com/marislab/pptc-pdx-classifier-analysis.git
    
          # Run script to create pie chart
-         Rscript ~/create-pptc-pdx-oncoprints/R/RUN-classifier-analyses.R 
+         Rscript ~/pptc-pdx-classifier-analysis/R/RUN-classifier-analyses.R 
          
 Results
 ========
